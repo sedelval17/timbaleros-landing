@@ -1,368 +1,345 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Coacheos · Asesoramiento Coreográfico Premium</title>
-    <meta
-      name="description"
-      content="Coacheos es el servicio premium de Fabián & Laura (Los Timbaleros) para preparar bailarines, parejas y grupos rumbo a competencias, shows y presentaciones profesionales."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      :root {
-        --bg: #0c0714;
-        --bg-alt: #150a20;
-        --accent: #b974ff;
-        --accent-2: #6f7cff;
-        --accent-soft: rgba(185, 116, 255, 0.15);
-        --text: #f3ecff;
-        --muted: #c0b3d7;
-        --card: rgba(27, 17, 42, 0.85);
-      }
 
-      * {
-        box-sizing: border-box;
-        margin: 0;
-      }
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Coacheos · Timbaleros</title>
+  <meta name="description"
+    content="Coacheos es el servicio premium de Fabián & Laura (Los Timbaleros) para preparar bailarines, parejas y grupos rumbo a competencias, shows y presentaciones profesionales." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0a0716;
+      --bg-alt: #120c1f;
+      --accent: #c18bff;
+      --accent-2: #8f6bff;
+      --accent-soft: rgba(193, 139, 255, 0.16);
+      --text: #f5eeff;
+      --muted: #cfc3ec;
+      --card: rgba(29, 19, 44, 0.85);
+    }
 
-      body {
-        font-family: 'Outfit', system-ui, -apple-system, 'Segoe UI', sans-serif;
-        background: radial-gradient(circle at top right, rgba(185, 116, 255, 0.25), transparent 45%), var(--bg);
-        color: var(--text);
-        line-height: 1.6;
-      }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+    }
 
-      img {
-        display: block;
-        max-width: 100%;
-      }
+    body {
+      font-family: 'Outfit', system-ui, -apple-system, 'Segoe UI', sans-serif;
+      background: radial-gradient(circle at top right, rgba(193, 139, 255, 0.25), transparent 45%), var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
 
-      a {
-        color: inherit;
-      }
+    img {
+      display: block;
+      max-width: 100%;
+    }
 
-      .wrapper {
-        width: min(1200px, 92%);
-        margin: 0 auto;
-      }
+    a {
+      color: inherit;
+    }
 
-      header {
-        padding: 2rem 0 5rem;
-      }
+    .wrapper {
+      width: min(1200px, 92%);
+      margin: 0 auto;
+    }
 
-      .topbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0.5rem 0 2rem;
-      }
+    header {
+      padding: 2rem 0 5rem;
+    }
 
-      .logo {
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        font-weight: 700;
-      }
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 0 2rem;
+    }
 
-      nav ul {
-        list-style: none;
+    .logo {
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    nav a {
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: var(--text);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.85rem;
+      color: var(--accent);
+    }
+
+    h1 {
+      margin: 1rem 0;
+      font-size: clamp(2.6rem, 6vw, 4.5rem);
+      line-height: 1.1;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 1.05rem;
+      margin-bottom: 1.1rem;
+    }
+
+    .hero-subtitle {
+      font-weight: 600;
+      color: var(--text);
+    }
+
+      .hero-media {
         display: flex;
         gap: 1.5rem;
-        font-size: 0.95rem;
-        color: var(--muted);
-      }
-
-      nav a {
-        text-decoration: none;
-      }
-
-      nav a:hover {
-        color: var(--text);
-      }
-
-      .hero {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 3rem;
-        align-items: center;
-      }
-
-      .eyebrow {
-        text-transform: uppercase;
-        letter-spacing: 0.12em;
-        font-size: 0.85rem;
-        color: var(--accent);
-      }
-
-      h1 {
-        margin: 1rem 0;
-        font-size: clamp(2.6rem, 6vw, 4.5rem);
-        line-height: 1.1;
-      }
-
-      .hero p {
-        color: var(--muted);
-        font-size: 1.1rem;
-        margin-bottom: 1.2rem;
-      }
-
-      .method-note {
-        background: var(--accent-soft);
-        border: 1px solid rgba(185, 116, 255, 0.35);
-        border-radius: 14px;
-        padding: 0.9rem 1rem;
-        color: var(--text);
-        font-weight: 500;
-        margin-bottom: 1.5rem;
-      }
-
-      .cta-group {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
-      }
-
-      .btn {
-        padding: 0.95rem 1.8rem;
-        border-radius: 999px;
-        border: 1px solid transparent;
-        text-decoration: none;
-        font-weight: 600;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-      }
-
-      .btn-primary {
-        background: linear-gradient(140deg, var(--accent), var(--accent-2));
-        color: #14051f;
-        box-shadow: 0 15px 35px rgba(111, 124, 255, 0.35);
-      }
-
-      .btn-secondary {
-        border-color: rgba(255, 255, 255, 0.25);
-        color: var(--text);
-      }
-
-      .btn:hover {
-        transform: translateY(-3px);
-      }
-
-      .badge-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-        gap: 1rem;
-        margin-top: 2rem;
-      }
-
-      .badge {
-        border: 1px solid rgba(185, 116, 255, 0.15);
-        border-radius: 16px;
-        padding: 1rem;
-        text-align: center;
-        background: rgba(185, 116, 255, 0.08);
+        margin: 1.5rem 0 2rem;
+        align-items: stretch;
       }
 
       .hero-photo {
-        margin: 1.5rem 0 2rem;
         border-radius: 26px;
         overflow: hidden;
         border: 1px solid rgba(255, 255, 255, 0.08);
         background: rgba(7, 4, 12, 0.4);
+        max-width: 520px;
+        flex: 1 1 520px;
       }
 
-      .hero-photo img {
-        width: 100%;
-        height: auto;
-        display: block;
+      .hero-media .card {
+        flex: 0 0 320px;
       }
 
-      .video-section {
-        margin-top: 2.5rem;
-      }
+    .hero-photo img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
 
-      .video-wrapper {
-        position: relative;
-        padding-bottom: 56.25%;
-        height: 0;
-        border-radius: 24px;
-        overflow: hidden;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        box-shadow: 0 25px 45px rgba(15, 8, 25, 0.6);
-      }
+    .cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
 
-      .video-wrapper iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border: 0;
-      }
+    .btn {
+      padding: 0.95rem 1.8rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
 
-      section {
-        padding: 4rem 0;
-      }
+    .btn-primary {
+      background: linear-gradient(140deg, var(--accent), var(--accent-2));
+      color: #120b1f;
+      box-shadow: 0 15px 35px rgba(143, 107, 255, 0.35);
+    }
 
-      section:nth-of-type(even) {
-        background: var(--bg-alt);
-      }
+    .btn-secondary {
+      border-color: rgba(255, 255, 255, 0.25);
+      color: var(--text);
+    }
 
-      .section-heading {
-        max-width: 780px;
-        margin-bottom: 2.5rem;
-      }
+    .btn:hover {
+      transform: translateY(-3px);
+    }
 
-      .section-heading h2 {
-        font-size: clamp(2rem, 4vw, 3.2rem);
-        margin-bottom: 0.7rem;
-      }
+    .badge-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
 
-      .section-heading p {
-        color: var(--muted);
-      }
-
-      .grid {
-        display: grid;
-        gap: 1.5rem;
-      }
-
-      .grid.cards-3 {
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      .badge {
+        border: 1px solid rgba(193, 139, 255, 0.15);
+        border-radius: 16px;
+        padding: 1rem;
+        text-align: center;
+        background: rgba(193, 139, 255, 0.08);
       }
 
       .card {
+        background: var(--card);
         border-radius: 20px;
         padding: 1.75rem;
-        background: var(--card);
-        border: 1px solid rgba(185, 116, 255, 0.1);
-        backdrop-filter: blur(10px);
+        border: 1px solid rgba(193, 139, 255, 0.12);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
       }
 
-      .card h3 {
-        margin-bottom: 0.5rem;
-        font-size: 1.25rem;
-      }
+    .list-check {
+      list-style: none;
+      padding: 0;
+      margin: 1.5rem 0 0;
+      color: var(--muted);
+    }
 
-      .card p {
-        color: var(--muted);
-      }
+    .list-check li {
+      margin-bottom: 0.6rem;
+      padding-left: 1.4rem;
+      position: relative;
+    }
 
-      .list-check {
-        list-style: none;
-        padding: 0;
-        margin: 1.5rem 0 0;
-        color: var(--muted);
-      }
+    .list-check li::before {
+      content: '\2022';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
 
-      .list-check li {
-        margin-bottom: 0.6rem;
-        padding-left: 1.4rem;
-        position: relative;
-      }
+    .hero-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 1.2rem 0 0;
+    }
 
-      .list-check li::before {
-        content: '✔';
-        position: absolute;
-        left: 0;
-        color: var(--accent);
-      }
+    .hero-bullets li {
+      margin-bottom: 0.6rem;
+      padding-left: 1.25rem;
+      position: relative;
+      color: var(--text);
+      font-weight: 500;
+    }
 
-      .steps-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-        gap: 1rem;
-      }
+    .hero-bullets li::before {
+      content: '\2713';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 700;
+    }
 
-      .step {
-        border: 1px solid rgba(255, 255, 255, 0.06);
-        border-radius: 16px;
-        padding: 1.25rem;
-        background: rgba(7, 8, 16, 0.65);
-      }
+    .tips {
+      margin: 1.4rem 0 0;
+      padding: 1rem 1.1rem;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(0, 0, 0, 0.15);
+    }
 
-      .step span {
-        display: inline-flex;
-        width: 36px;
-        height: 36px;
-        border-radius: 50%;
-        align-items: center;
-        justify-content: center;
-        background: var(--accent-soft);
-        color: var(--accent);
-        font-weight: 600;
-        margin-bottom: 0.8rem;
-      }
+    .tips strong {
+      display: block;
+      margin-bottom: 0.6rem;
+      color: var(--accent);
+      letter-spacing: 0.02em;
+    }
 
-      .plans {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        gap: 1.5rem;
-      }
+    .tips ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
 
-      .plan {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-      }
+    .tips li {
+      position: relative;
+      padding-left: 1.4rem;
+      margin-bottom: 0.55rem;
+      color: var(--text);
+    }
 
-      .plan h3 {
-        margin-bottom: 0.4rem;
-      }
+    .tips li::before {
+      content: '\2605';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 700;
+    }
 
-      .plan strong {
-        font-size: 1.6rem;
-        display: block;
-        margin-bottom: 0.6rem;
-      }
+    .video-block {
+      padding: 1.5rem;
+      border-radius: 20px;
+      background: var(--card);
+      border: 1px solid rgba(193, 139, 255, 0.12);
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+    }
 
-      .plan ul {
-        list-style: none;
-        padding: 0;
-        color: var(--muted);
-        flex-grow: 1;
-      }
+    .video-embed {
+      position: relative;
+      padding-top: 56.25%;
+      border-radius: 12px;
+      overflow: hidden;
+    }
 
-      .plan ul li {
-        margin-bottom: 0.5rem;
-        padding-left: 1.2rem;
-        position: relative;
-      }
+    .video-embed iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
 
-      .plan ul li::before {
-        content: '•';
-        position: absolute;
-        left: 0;
-        color: var(--accent);
-      }
+    .why-block {
+      margin-top: 1.5rem;
+      padding: 1.25rem 1.5rem;
+      border-radius: 16px;
+      border: 1px solid rgba(193, 139, 255, 0.18);
+      background: rgba(0, 0, 0, 0.15);
+    }
 
-      .plan .btn {
-        margin-top: 1rem;
-        width: 100%;
-        justify-content: center;
-        align-self: flex-end;
-      }
+    .cta-group {
+      margin-top: 1rem;
+    }
 
-      .cta-block {
-        text-align: center;
-        padding: 3rem 2rem;
-        background: linear-gradient(120deg, rgba(111, 124, 255, 0.25), rgba(185, 116, 255, 0.1));
-        border-radius: 24px;
-        border: 1px solid rgba(255, 255, 255, 0.08);
-      }
+    .plans {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
 
-      footer {
-        text-align: center;
-        padding: 3rem 0;
-        color: var(--muted);
-        font-size: 0.9rem;
-      }
+    .plan ul li::before {
+      content: '\2022';
+    }
+
+    .cta-block {
+      text-align: center;
+      padding: 3rem 2rem;
+      background: linear-gradient(120deg, rgba(143, 107, 255, 0.25), rgba(193, 139, 255, 0.12));
+      border-radius: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    section {
+      padding: 4rem 0;
+    }
+
+    section:nth-of-type(even) {
+      background: var(--bg-alt);
+    }
+
+    footer {
+      text-align: center;
+      padding: 3rem 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
 
       @media (max-width: 720px) {
         nav ul {
@@ -373,335 +350,384 @@
           flex-direction: column;
           align-items: stretch;
         }
+
+        .hero-media {
+          flex-direction: column;
+        }
+
+        .hero-media .card,
+        .hero-photo {
+          flex: 1 1 100%;
+          max-width: 100%;
+        }
       }
-    </style>
-  </head>
-  <body>
-    <header>
-      <div class="wrapper">
-        <div class="topbar">
-          <div class="logo">Coacheos · Los Timbaleros</div>
-          <nav>
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="wrapper">
+      <div class="topbar">
+        <div class="logo">Coacheos · Timbaleros</div>
+        <nav>
+          <ul>
+            <li><a href="#concepto">Concepto</a></li>
+            <li><a href="#equipo">Equipo</a></li>
+            <li><a href="#oferta">Oferta</a></li>
+            <li><a href="#planes">Planes</a></li>
+            <li><a href="#contacto">WhatsApp</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="hero">
+        <div>
+          <p class="eyebrow">By Fabián y Laura</p>
+          <h1>Coacheos Profesionales para Crear y Potenciar tu Coreografía</h1>
+          <p class="hero-subtitle">Elevá tu nivel competitivo con un acompañamiento experto y personalizado.</p>
+          <div class="hero-photo">
+            <img src="assets/img/fabian-laura.jpg" alt="Fabián y Laura trabajando con su compañía" />
+          </div>
+          <p>
+            Coacheos es un servicio integral diseñado para bailarines, parejas y grupos que buscan competir, crear un
+            show
+            o alcanzar un nivel profesional. Contamos con más de 20 años de experiencia, campeonatos y giras
+            internacionales; te guiamos en cada etapa del proceso creativo y técnico para que tu presentación tenga el
+            máximo impacto.
+          </p>
+          <ul class="hero-bullets">
+            <li>Selección y edición profesional de la música.</li>
+            <li>Lectura y estrategia basada en reglamento.</li>
+            <li>Concepto artístico y narrativa escénica.</li>
+            <li>Armado escénico y puesta en escena.</li>
+            <li>Correcciones técnicas avanzadas.</li>
+            <li>Coaching mental y preparación competitiva.</li>
+            <li>Optimización de performance.</li>
+            <li>Entrenamiento en proyección, presencia y estilo.</li>
+          </ul>
+          <div class="tips">
+            <strong>TIPS para elegir un buen proceso de coacheo</strong>
             <ul>
-              <li><a href="#concepto">Concepto</a></li>
-              <li><a href="#equipo">Equipo</a></li>
-              <li><a href="#oferta">Oferta</a></li>
-              <li><a href="#planes">Planes</a></li>
-              <li><a href="#contacto">WhatsApp</a></li>
+              <li>Buscá un método que combine baile, técnica y estrategia de competición.</li>
+              <li>Priorizar claridad musical y conceptual de tu performance.</li>
+              <li>Una coreografía efectiva no siempre es la más compleja, sino la más coherente.</li>
+              <li>Ensayá con criterios: momentos fuertes, uso espacial, puntos de impacto.</li>
+              <li>La edición musical es tan importante como los pasos.</li>
             </ul>
-          </nav>
+          </div>
+          <div class="cta-group">
+            <a class="btn btn-primary"
+              href="https://wa.me/5493515111242?text=Hola%20Los%20Timbaleros,%20quiero%20informaci%C3%B3n%20de%20Coacheos"
+              target="_blank" rel="noreferrer">Reservar un coacheo</a>
+            <a class="btn btn-secondary" href="#oferta">Ver todo lo que incluye</a>
+          </div>
+          <div class="video-block" style="margin-top: 1.5rem;" id="video">
+            <p class="eyebrow">Mira un ejemplo</p>
+            <h3>Asi se ve nuestro trabajo en escena.</h3>
+            <p>Un adelanto de la calidad de montaje, presencia escenica y musicalidad que vas a entrenar con nosotros.
+            </p>
+            <div class="video-embed">
+              <iframe width="885" height="498" src="https://www.youtube.com/embed/7xPMmgOiXB8"
+                title="Salsa Dance - Fabian y Laura (Arg)" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="why-block">
+            <p class="eyebrow">POR QUE ELEGIRNOS</p>
+            <ul class="hero-bullets">
+              <li>Con más de 20 años como formadores, competidores y jurados, tenemos experiencia real en cada
+                instancia.</li>
+              <li>Método probado que combina baile, técnica, psicología y performance.</li>
+              <li>Experiencia real en mundiales y eventos de alto nivel.</li>
+              <li>Asistencia personalizada según tu nivel y objetivos.</li>
+            </ul>
+          </div>
+          <div class="badge-grid">
+            <div class="badge">Alta demanda: mínimo 5-10 coacheos activos por mes.</div>
+            <div class="badge">Paquetes premium desde ARS 150.000 a 500.000+.</div>
+            <div class="badge">Edición musical profesional incluida.</div>
+          </div>
         </div>
-        <div class="hero">
-          <div>
-            <p class="eyebrow">By Fabián &amp; Laura · Los Timbaleros</p>
-            <h1>Asesoramiento coreográfico premium para competir y brillar.</h1>
-            <p>
-              Coacheos es un servicio integral para bailarines, parejas y grupos que buscan competir, crear un show o dar
-              el salto profesional con guía experta. 20+ años, campeonatos, certámenes y giras avalan nuestro método.
-            </p>
-            <p class="method-note">
-              Acompañamos TODO: música, reglamento, concepto, armado escénico, correcciones técnicas y mentalidad de
-              competencia.
-            </p>
-            <div class="hero-photo">
-              <img src="assets/img/fabian-laura.jpg" alt="Fabián y Laura trabajando con su compañía" />
-            </div>
-            <div class="video-section">
-              <p class="eyebrow" style="margin-bottom: 0.8rem;">Mirá un adelanto</p>
-              <div class="video-wrapper">
-                <iframe
-                  src="https://www.youtube.com/embed/7xPMmgOiXB8"
-                  title="Los Timbaleros en acción"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                ></iframe>
-              </div>
-            </div>
-            <div class="cta-group">
-              <a
-                class="btn btn-primary"
-                href="https://wa.me/5493515111242?text=Hola%20Los%20Timbaleros,%20quiero%20informaci%C3%B3n%20de%20Coacheos"
-                target="_blank"
-                rel="noreferrer"
-                >Reservar un coacheo</a
-              >
-              <a class="btn btn-secondary" href="#oferta">Ver todo lo que incluye</a>
-            </div>
-            <div class="badge-grid">
-              <div class="badge">Alta demanda: mínimo 5-10 coacheos activos por mes.</div>
-              <div class="badge">Paquetes premium desde ARS 150.000 a 500.000+.</div>
-              <div class="badge">Edición musical profesional incluida.</div>
-            </div>
-          </div>
-          <div class="card">
-            <h3>Lo que lográs con Coacheos</h3>
-            <ul class="list-check">
-              <li>Proceso paso a paso para competir sin miedos.</li>
-              <li>Mentoría artística y psicológica para sostener el nivel.</li>
-              <li>Material entregable: checklist, videos y PDFs.</li>
-              <li>Resultados visibles en técnica, performance y presencia.</li>
-            </ul>
-          </div>
+        <div class="card">
+          <h3>Lo que lográs con Coacheos</h3>
+          <ul class="list-check">
+            <li>Proceso paso a paso para competir sin miedos.</li>
+            <li>Mentoría artística y psicológica para sostener el nivel.</li>
+            <li>Material entregable: checklist, videos y PDFs.</li>
+            <li>Resultados visibles en técnica, performance y presencia.</li>
+          </ul>
         </div>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <main>
-      <section id="concepto">
-        <div class="wrapper">
-          <div class="section-heading">
-            <p class="eyebrow">Concepto del servicio</p>
-            <h2>Coacheos es acompañamiento total, de la música al saludo final.</h2>
-            <p>
-              Perfecto para quienes quieren competir por primera vez, necesitan ese empujón para subir al podio o desean
-              un show profesional hecho a su medida. Somos garantía porque vivimos reglamentos, rondas, penalizaciones y
-              escenarios internacionales durante dos décadas.
-            </p>
-          </div>
-          <div class="grid cards-3">
-            <article class="card">
-              <h3>Competidores nuevos</h3>
-              <p>
-                Claridad absoluta: te guiamos en reglamento, categorías, tiempos y cómo presentarte sin sentir que vas a
-                “hacer el ridículo”.
-              </p>
-            </article>
-            <article class="card">
-              <h3>Competidores activos</h3>
-              <p>
-                Diagnóstico profundo para detectar por qué no llegan los podios. Ajustamos técnica, musicalidad y momentos
-                wow para subir puntajes.
-              </p>
-            </article>
-            <article class="card">
-              <h3>Bailarines que quieren show</h3>
-              <p>
-                Creamos esa pieza única para congresos, eventos sociales o la carrera personal. Coreo original, estilo y
-                presencia escénica lideran el proceso.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="equipo">
-        <div class="wrapper">
-          <div class="section-heading">
-            <p class="eyebrow">Quiénes te acompañan</p>
-            <h2>Fabián López &amp; Laura Gaetán</h2>
-            <p>
-              Pareja de bailarines profesionales de ritmos latinos, coreógrafos y jueces nacionales e internacionales.
-              Durante 20 años lideran la academia Los Timbaleros en Córdoba (Espora 123, barrio Alto Alberdi) formando
-              bailarines en salsa, bachata, merengue, mambo y chachachá con un cuerpo docente especializado. Su foco está
-              en preparar talentos para competencias y shows latinos.
-            </p>
-          </div>
-          <div class="grid cards-3">
-            <article class="card">
-              <h3>Trayectoria y shows</h3>
-              <p>
-                Talleristas y artistas invitados en Argentina y en países como Chile, Brasil, Perú, Estados Unidos, Cuba
-                y Uruguay. Presentaron shows y cursos en congresos, festivales y giras privadas.
-              </p>
-              <ul class="list-check">
-                <li>Academia Los Timbaleros con 20 años de actividad.</li>
-                <li>Directores y profesores activos en cada disciplina.</li>
-              </ul>
-            </article>
-            <article class="card">
-              <h3>Logros competitivos</h3>
-              <p>
-                Bicampeones argentinos de salsa, representantes nacionales en el Mundial de Puerto Rico (3 veces) y
-                finalistas mundiales en Orlando, Estados Unidos.
-              </p>
-              <p style="color: var(--muted); margin-top: 0.8rem;">
-                Han acompañado con su baile a Oscar de León, José Alberto “El Canario”, Tito Nieves, Luis Enrique,
-                Domenic Marte y Daniel Santa Cruz.
-              </p>
-            </article>
-            <article class="card">
-              <h3>Formación académica</h3>
-              <p>
-                Se formaron con referentes como Jayson Molina (Puerto Rico), Marta Bersy y Maykel Fonts (Cuba) y maestros de
-                Nueva York como Eddie Torres y Franklin Diaz. Integraron staffs profesionales y trasladan ese conocimiento
-                a cada coacheo.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="wrapper">
-          <div class="section-heading">
-            <p class="eyebrow">Por qué es único</p>
-            <h2>Valor diferencial que convierte curiosos en clientes premium.</h2>
-            <p>
-              No es solo coaching técnico. Es un sistema completo con entregables reales, edición musical profesional y
-              secretos de jurado que otras academias no manejan.
-            </p>
-          </div>
-          <div class="grid cards-3">
-            <article class="card">
-              <h3>Proceso paso a paso</h3>
-              <p>
-                Desde elegir la música hasta cómo mirar al jurado. Checklist y guías que reducen la incertidumbre y ordenan el
-                entrenamiento día a día.
-              </p>
-            </article>
-            <article class="card">
-              <h3>Expertise en reglamentos</h3>
-              <p>
-                Explicamos criterios, penalizaciones y cómo capitalizar cada ítem. Sabemos qué pide cada competencia y lo
-                traducimos a acciones concretas.
-              </p>
-            </article>
-            <article class="card">
-              <h3>Mentoría integral</h3>
-              <p>
-                Correcciones técnicas, drills personalizados, mentalidad de competencia y entregables (videos, PDFs, notas)
-                para seguir creciendo entre sesiones.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="oferta">
-        <div class="wrapper">
-          <div class="section-heading">
-            <p class="eyebrow">Oferta central</p>
-            <h2>Coacheos Integral Premium: 11 hitos que cubren todo el proceso.</h2>
-            <p>
-              Cada servicio incluye sesiones online o presenciales, seguimiento por video y espacios privados para feedback. Si
-              un punto es opcional, lo ajustamos al objetivo, pero siempre con la misma rigurosidad.
-            </p>
-          </div>
-          <div class="steps-grid">
-            <div class="step"><span>1</span><strong> Diagnóstico</strong><p>Nivel, estilo, fortalezas/debilidades y objetivo final.</p></div>
-            <div class="step"><span>2</span><strong> Selección musical</strong><p>Análisis de energía y temáticas para elegir la pista adecuada.</p></div>
-            <div class="step"><span>3</span><strong> Edición profesional</strong><p>Cortes según reglamento, efectos y versión lista para competir.</p></div>
-            <div class="step"><span>4</span><strong> Lectura del reglamento</strong><p>Desmenuzamos criterios, penalizaciones y chances de puntaje.</p></div>
-            <div class="step"><span>5</span><strong> Concepto del show</strong><p>Tema, vestuario sugerido, storytelling y paleta emocional.</p></div>
-            <div class="step"><span>6</span><strong> Armado coreográfico</strong><p>Señas, entradas, salidas, distribución espacial y momentos wow.</p></div>
-            <div class="step"><span>7</span><strong> Coaching técnico</strong><p>Postura, brazos, pies, giros, mambos, shines y drills personalizados.</p></div>
-            <div class="step"><span>8</span><strong> Coaching performático</strong><p>Miradas, expresiones, actitudes y presencia escénica consciente.</p></div>
-            <div class="step"><span>9</span><strong> Correcciones semanales</strong><p>Evaluación por video o presencial con notas detalladas.</p></div>
-            <div class="step"><span>10</span><strong> Simulación de competencia</strong><p>Entradas, saludos, aprovechamiento del espacio y protocolo.</p></div>
-            <div class="step"><span>11</span><strong> Checklist final + video</strong><p>Recordatorios clave y video guía grabado por nosotros.</p></div>
-          </div>
-        </div>
-      </section>
-
-      <section id="planes">
-        <div class="wrapper">
-          <div class="section-heading">
-            <p class="eyebrow">Versiones para cada presupuesto</p>
-            <h2>Elegí el paquete que impulsa tu objetivo.</h2>
-            <p>Todos los planes incluyen soporte por WhatsApp y acceso a recursos privados.</p>
-          </div>
-          <div class="plans">
-            <article class="card plan">
-              <h3>Coacheos Light</h3>
-              <strong>ARS 90.000 – 150.000</strong>
-              <ul>
-                <li>Sesión de diagnóstico</li>
-                <li>Selección musical + propuesta de temática</li>
-                <li>1 asesoría de reglamento</li>
-                <li>3 correcciones por video</li>
-                <li>Recomendado para quienes compiten por primera vez</li>
-              </ul>
-              <a
-                class="btn btn-secondary"
-                href="https://wa.me/5493515111242?text=Hola%20Los%20Timbaleros,%20quiero%20consultar%20por%20el%20plan%20Coacheos%20Light"
-                target="_blank"
-                rel="noreferrer"
-                >Consultar este plan</a
-              >
-            </article>
-            <article class="card plan">
-              <h3>Coacheos Standard</h3>
-              <strong>ARS 180.000 – 300.000</strong>
-              <ul>
-                <li>Todo lo de Light</li>
-                <li>Edición musical profesional</li>
-                <li>4 sesiones técnicas focalizadas</li>
-                <li>2 sesiones performáticas</li>
-                <li>Ideal para competidores intermedios</li>
-              </ul>
-              <a
-                class="btn btn-secondary"
-                href="https://wa.me/5493515111242?text=Hola%20Los%20Timbaleros,%20quiero%20consultar%20por%20el%20plan%20Coacheos%20Standard"
-                target="_blank"
-                rel="noreferrer"
-                >Consultar este plan</a
-              >
-            </article>
-            <article class="card plan">
-              <h3>Coacheos Premium</h3>
-              <strong>ARS 350.000 – 600.000</strong>
-              <ul>
-                <li>Servicio completo + coreografía creada por nosotros</li>
-                <li>Coaching ilimitado hasta la fecha del show</li>
-                <li>Simulación de competencia con presencia de Fabián &amp; Laura</li>
-                <li>Checklist extendido y dossier final</li>
-              </ul>
-              <a
-                class="btn btn-secondary"
-                href="https://wa.me/5493515111242?text=Hola%20Los%20Timbaleros,%20quiero%20consultar%20por%20el%20plan%20Coacheos%20Premium"
-                target="_blank"
-                rel="noreferrer"
-                >Consultar este plan</a
-              >
-            </article>
-          </div>
-          <div class="card" style="margin-top: 2rem;">
-            <h3>Servicios individuales</h3>
-            <p style="color: var(--muted);">Combiná según tu necesidad puntual.</p>
-            <ul class="list-check">
-              <li>Edición musical sola desde ARS 30.000.</li>
-              <li>Corrección por video desde ARS 8.000 c/u.</li>
-              <li>Sesión presencial desde ARS 20.000.</li>
-              <li>Talleres grupales, PDFs y mini cursos para escalar.</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section id="contacto">
-        <div class="wrapper">
-          <div class="cta-block">
-            <p class="eyebrow">Hablemos hoy</p>
-            <h2 style="margin: 0.6rem 0 1rem;">Agendá una consulta</h2>
-            <p style="color: var(--muted); margin-bottom: 2rem;">
-              La consulta estratégica tiene costo y asegura que nuestra agenda esté enfocada en proyectos comprometidos.
-              Reservamos máximo 10 coacheos activos por mes; contanos tu objetivo y coordinamos el encuentro.
-            </p>
-            <div class="cta-group" style="justify-content: center;">
-              <a
-                class="btn btn-primary"
-                href="https://wa.me/5493515111242?text=Hola%20Los%20Timbaleros,%20quiero%20agendar%20una%20consulta%20paga%20de%20Coacheos"
-                target="_blank"
-                rel="noreferrer"
-                >Enviar WhatsApp</a
-              >
-              <a class="btn btn-secondary" href="mailto:hola@lostimbaleros.com">Enviar un email</a>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer>
+  <main>
+    <section id="concepto">
       <div class="wrapper">
-        © <span id="year"></span> Coacheos · Los Timbaleros · Córdoba - Argentina
-        <p style="margin-top: 0.5rem;">Hecho con ♥ por bailarines, para bailarines.</p>
+        <div class="section-heading">
+          <p class="eyebrow">Concepto del servicio</p>
+          <h2>Coacheos es acompañamiento total, de la música al saludo final.</h2>
+          <p>
+            Perfecto para quienes quieren competir por primera vez, necesitan ese empujón para subir al podio o desean
+            un show profesional hecho a su medida. Somos garantía porque vivimos reglamentos, rondas, penalizaciones y
+            escenarios internacionales durante dos décadas.
+          </p>
+        </div>
+        <div class="grid cards-3">
+          <article class="card">
+            <h3>Competidores nuevos</h3>
+            <p>
+              Claridad absoluta: te guiamos en reglamento, categorías, tiempos y cómo presentarte sin sentir que vas a
+              “hacer el ridículo”.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Competidores activos</h3>
+            <p>
+              Diagnóstico profundo para detectar por qué no llegan los podios. Ajustamos técnica, musicalidad y momentos
+              wow para subir puntajes.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Bailarines que quieren show</h3>
+            <p>
+              Creamos esa pieza única para congresos, eventos sociales o la carrera personal. Coreo original, estilo y
+              presencia escénica lideran el proceso.
+            </p>
+          </article>
+        </div>
       </div>
-    </footer>
+    </section>
 
-    <script>
-      const year = document.getElementById('year');
-      if (year) year.textContent = new Date().getFullYear();
-    </script>
-  </body>
+    <section id="equipo">
+      <div class="wrapper">
+        <div class="section-heading">
+          <p class="eyebrow">Quiénes te acompañan</p>
+          <h2>Fabián López &amp; Laura Gaetán</h2>
+          <p>
+            Pareja de bailarines profesionales de ritmos latinos, coreógrafos y jueces nacionales e internacionales.
+            Durante 20 años lideran la academia Los Timbaleros en Córdoba (Espora 123, barrio Alto Alberdi) formando
+            bailarines en salsa, bachata, merengue, mambo y chachachá con un cuerpo docente especializado. Su foco está
+            en preparar talentos para competencias y shows latinos.
+          </p>
+        </div>
+        <div class="grid cards-3">
+          <article class="card">
+            <h3>Trayectoria y shows</h3>
+            <p>
+              Talleristas y artistas invitados en Argentina y en países como Chile, Brasil, Perú, Estados Unidos, Cuba
+              y Uruguay. Presentaron shows y cursos en congresos, festivales y giras privadas.
+            </p>
+            <ul class="list-check">
+              <li>Academia Los Timbaleros con 20 años de actividad.</li>
+              <li>Directores y profesores activos en cada disciplina.</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Logros competitivos</h3>
+            <p>
+              Bicampeones argentinos de salsa, representantes nacionales en el Mundial de Puerto Rico (3 veces) y
+              finalistas mundiales en Orlando, Estados Unidos.
+            </p>
+            <p style="color: var(--muted); margin-top: 0.8rem;">
+              Han acompañado con su baile a Oscar de León, José Alberto “El Canario”, Tito Nieves, Luis Enrique,
+              Domenic Marte y Daniel Santa Cruz.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Formación académica</h3>
+            <p>
+              Se formaron con referentes como Jayson Molina (Puerto Rico), Marta Bersy y Maykel Fonts (Cuba) y maestros
+              de
+              Nueva York como Eddie Torres y Franklin Diaz. Integraron staffs profesionales y trasladan ese conocimiento
+              a cada coacheo.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrapper">
+        <div class="section-heading">
+          <p class="eyebrow">Por qué es único</p>
+          <h2>Valor diferencial que convierte curiosos en clientes premium.</h2>
+          <p>
+            No es solo coaching técnico. Es un sistema completo con entregables reales, edición musical profesional y
+            secretos de jurado que otras academias no manejan.
+          </p>
+        </div>
+        <div class="grid cards-3">
+          <article class="card">
+            <h3>Proceso paso a paso</h3>
+            <p>
+              Desde elegir la música hasta cómo mirar al jurado. Checklist y guías que reducen la incertidumbre y
+              ordenan el
+              entrenamiento día a día.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Expertise en reglamentos</h3>
+            <p>
+              Explicamos criterios, penalizaciones y cómo capitalizar cada ítem. Sabemos qué pide cada competencia y lo
+              traducimos a acciones concretas.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Mentoría integral</h3>
+            <p>
+              Correcciones técnicas, drills personalizados, mentalidad de competencia y entregables (videos, PDFs,
+              notas)
+              para seguir creciendo entre sesiones.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="oferta">
+      <div class="wrapper">
+        <div class="section-heading">
+          <p class="eyebrow">Oferta central</p>
+          <h2>Coacheos Integral Premium: 11 hitos que cubren todo el proceso.</h2>
+          <p>
+            Cada servicio incluye sesiones online o presenciales, seguimiento por video y espacios privados para
+            feedback. Si
+            un punto es opcional, lo ajustamos al objetivo, pero siempre con la misma rigurosidad.
+          </p>
+        </div>
+        <div class="steps-grid">
+          <div class="step"><span>1</span><strong> Diagnóstico</strong>
+            <p>Nivel, estilo, fortalezas/debilidades y objetivo final.</p>
+          </div>
+          <div class="step"><span>2</span><strong> Selección musical</strong>
+            <p>Análisis de energía y temáticas para elegir la pista adecuada.</p>
+          </div>
+          <div class="step"><span>3</span><strong> Edición profesional</strong>
+            <p>Cortes según reglamento, efectos y versión lista para competir.</p>
+          </div>
+          <div class="step"><span>4</span><strong> Lectura del reglamento</strong>
+            <p>Desmenuzamos criterios, penalizaciones y chances de puntaje.</p>
+          </div>
+          <div class="step"><span>5</span><strong> Concepto del show</strong>
+            <p>Tema, vestuario sugerido, storytelling y paleta emocional.</p>
+          </div>
+          <div class="step"><span>6</span><strong> Armado coreográfico</strong>
+            <p>Señas, entradas, salidas, distribución espacial y momentos wow.</p>
+          </div>
+          <div class="step"><span>7</span><strong> Coaching técnico</strong>
+            <p>Postura, brazos, pies, giros, mambos, shines y drills personalizados.</p>
+          </div>
+          <div class="step"><span>8</span><strong> Coaching performático</strong>
+            <p>Miradas, expresiones, actitudes y presencia escénica consciente.</p>
+          </div>
+          <div class="step"><span>9</span><strong> Correcciones semanales</strong>
+            <p>Evaluación por video o presencial con notas detalladas.</p>
+          </div>
+          <div class="step"><span>10</span><strong> Simulación de competencia</strong>
+            <p>Entradas, saludos, aprovechamiento del espacio y protocolo.</p>
+          </div>
+          <div class="step"><span>11</span><strong> Checklist final + video</strong>
+            <p>Recordatorios clave y video guía grabado por nosotros.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="planes">
+      <div class="wrapper">
+        <div class="section-heading">
+          <p class="eyebrow">Versiones para cada presupuesto</p>
+          <h2>Elegí el paquete que impulsa tu objetivo.</h2>
+          <p>Todos los planes incluyen soporte por WhatsApp y acceso a recursos privados.</p>
+        </div>
+        <div class="plans">
+          <article class="card plan">
+            <h3>Coacheos Light</h3>
+            <strong>ARS 90.000 – 150.000</strong>
+            <ul class="list-check">
+              <li>Sesión de diagnóstico</li>
+              <li>Selección musical + propuesta de temática</li>
+              <li>1 asesoría de reglamento</li>
+              <li>3 correcciones por video</li>
+              <li>Recomendado para quienes compiten por primera vez</li>
+            </ul>
+            <a class="btn btn-secondary"
+              href="https://wa.me/5493515111242?text=Hola%20Los%20Timbaleros,%20quiero%20consultar%20por%20el%20plan%20Coacheos%20Light"
+              target="_blank" rel="noreferrer">Consultar este plan</a>
+          </article>
+          <article class="card plan">
+            <h3>Coacheos Standard</h3>
+            <strong>ARS 180.000 – 300.000</strong>
+            <ul class="list-check">
+              <li>Todo lo de Light</li>
+              <li>Edición musical profesional</li>
+              <li>4 sesiones técnicas focalizadas</li>
+              <li>2 sesiones performáticas</li>
+              <li>Ideal para competidores intermedios</li>
+            </ul>
+            <a class="btn btn-secondary"
+              href="https://wa.me/5493515111242?text=Hola%20Los%20Timbaleros,%20quiero%20consultar%20por%20el%20plan%20Coacheos%20Standard"
+              target="_blank" rel="noreferrer">Consultar este plan</a>
+          </article>
+          <article class="card plan">
+            <h3>Coacheos Premium</h3>
+            <strong>ARS 350.000 – 600.000</strong>
+            <ul class="list-check">
+              <li>Servicio completo + coreografía creada por nosotros</li>
+              <li>Coaching ilimitado hasta la fecha del show</li>
+              <li>Simulación de competencia con presencia de Fabián &amp; Laura</li>
+              <li>Checklist extendido y dossier final</li>
+            </ul>
+            <a class="btn btn-secondary"
+              href="https://wa.me/5493515111242?text=Hola%20Los%20Timbaleros,%20quiero%20consultar%20por%20el%20plan%20Coacheos%20Premium"
+              target="_blank" rel="noreferrer">Consultar este plan</a>
+          </article>
+        </div>
+        <div class="card" style="margin-top: 2rem;">
+          <h3>Servicios individuales</h3>
+          <p style="color: var(--muted);">Combiná según tu necesidad puntual.</p>
+          <ul class="list-check">
+            <li>Edición musical sola desde ARS 30.000.</li>
+            <li>Corrección por video desde ARS 8.000 c/u.</li>
+            <li>Sesión presencial desde ARS 20.000.</li>
+            <li>Talleres grupales, PDFs y mini cursos para escalar.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <div class="wrapper">
+        <div class="cta-block">
+          <p class="eyebrow">Hablemos hoy</p>
+          <h2 style="margin: 0.6rem 0 1rem;">Agendá una consulta</h2>
+          <p style="color: var(--muted); margin-bottom: 2rem;">
+            La consulta estratégica tiene costo y asegura que nuestra agenda esté enfocada en proyectos comprometidos.
+            Reservamos máximo 10 coacheos activos por mes; contanos tu objetivo y coordinamos el encuentro.
+          </p>
+          <div class="cta-group" style="justify-content: center;">
+            <a class="btn btn-primary"
+              href="https://wa.me/5493515111242?text=Hola%20Los%20Timbaleros,%20quiero%20agendar%20una%20consulta%20paga%20de%20Coacheos"
+              target="_blank" rel="noreferrer">Enviar WhatsApp</a>
+            <a class="btn btn-secondary" href="mailto:hola@lostimbaleros.com">Enviar un email</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrapper">
+      © <span id="year"></span> Coacheos · Timbaleros · Córdoba - Argentina
+      <p style="margin-top: 0.5rem;">Hecho con amor por bailarines, para bailarines.</p>
+    </div>
+  </footer>
+
+  <script>
+    const year = document.getElementById('year');
+    if (year) year.textContent = new Date().getFullYear();
+  </script>
+</body>
+
 </html>
