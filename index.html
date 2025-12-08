@@ -2,765 +2,786 @@
 <html lang="es">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Coacheos · Timbaleros</title>
+  <meta charset="UTF-8" />
+  <title>Coacheos Profesionales – Timbaleros</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
-    content="Coacheos es el servicio premium de Fabián & Laura (Los Timbaleros) para preparar bailarines, parejas y grupos rumbo a competencias, shows y presentaciones profesionales." />
+    content="Coacheos profesionales para crear, corregir y potenciar tu coreografía. Entrenamiento coreográfico personalizado para bailarines, parejas y grupos." />
+  <!-- Tipografía similar a la de tu diseño -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
   <style>
     :root {
-      --bg: #0a0716;
-      --bg-alt: #120c1f;
-      --accent: #c18bff;
-      --accent-2: #8f6bff;
-      --accent-soft: rgba(193, 139, 255, 0.16);
-      --text: #f5eeff;
-      --muted: #cfc3ec;
-      --card: rgba(29, 19, 44, 0.85);
+      --bg-main: #120f2b;
+      --card: #21153d;
+      --card-soft: #2a1849;
+      --text-main: #f9f5ff;
+      --text-soft: #d1c4ff;
+      --accent: #f472d0;
+      --accent-strong: #ff7adf;
+      --accent-soft: #c4a9ff;
+      --border-subtle: #3b275c;
     }
 
     * {
       box-sizing: border-box;
-      margin: 0;
     }
 
     body {
-      font-family: 'Outfit', system-ui, -apple-system, 'Segoe UI', sans-serif;
-      background: radial-gradient(circle at top right, rgba(193, 139, 255, 0.25), transparent 45%), var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    img {
-      display: block;
-      max-width: 100%;
+      margin: 0;
+      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+      background: var(--bg-main);
+      color: var(--text-main);
     }
 
     a {
       color: inherit;
-    }
-
-    .wrapper {
-      width: min(1200px, 92%);
-      margin: 0 auto;
-    }
-
-    header {
-      padding: 2rem 0 5rem;
-    }
-
-    .topbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0.5rem 0 2rem;
-    }
-
-    .logo {
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      font-weight: 700;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 1.5rem;
-      font-size: 0.95rem;
-      color: var(--muted);
-    }
-
-    nav a {
       text-decoration: none;
     }
 
-    nav a:hover {
-      color: var(--text);
+    .page {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
     }
 
-    .hero {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 3rem;
-      align-items: center;
+    .wrapper {
+      max-width: 960px;
+      width: 100%;
+      padding: 1.5rem 1rem 3rem;
     }
 
-    .eyebrow {
+    .card-main {
+      background: var(--card);
+      border-radius: 1.25rem;
+      padding: 1.75rem 1.5rem 2.5rem;
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45);
+    }
+
+    @media (min-width: 768px) {
+      .card-main {
+        padding: 2.25rem 2.25rem 3rem;
+      }
+    }
+
+    .badge-top {
+      font-size: 0.8rem;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
-      letter-spacing: 0.12em;
-      font-size: 0.85rem;
-      color: var(--accent);
+      color: var(--accent-soft);
+      margin-bottom: 0.4rem;
     }
 
-    h1 {
-      margin: 1rem 0;
-      font-size: clamp(2.6rem, 6vw, 4.5rem);
-      line-height: 1.1;
+    .byline {
+      font-size: 0.8rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--text-soft);
+      margin-bottom: 0.75rem;
     }
 
-    .hero p {
-      color: var(--muted);
-      font-size: 1.05rem;
-      margin-bottom: 1.1rem;
+    h1.hero-title {
+      font-size: 2rem;
+      line-height: 1.15;
+      margin: 0 0 0.5rem;
+    }
+
+    @media (min-width: 768px) {
+      h1.hero-title {
+        font-size: 2.4rem;
+      }
     }
 
     .hero-subtitle {
-      font-weight: 600;
-      color: var(--text);
+      font-size: 0.98rem;
+      color: var(--text-soft);
+      margin-bottom: 1.5rem;
     }
 
-      .hero-media {
-        display: flex;
-        gap: 1.5rem;
-        margin: 1.5rem 0 2rem;
-        align-items: stretch;
-      }
+    .hero-image {
+      margin-bottom: 1.5rem;
+    }
 
-      .hero-photo {
-        border-radius: 26px;
-        overflow: hidden;
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        background: rgba(7, 4, 12, 0.4);
-        max-width: 520px;
-        flex: 1 1 520px;
-      }
+    .hero-image img {
+      width: 100%;
+      max-width: 960px;
+      border-radius: 1rem;
+      display: block;
+    }
 
-      .hero-media .card {
-        flex: 0 0 320px;
-      }
+    .hero-actions {
+      margin: 1rem 0 1.75rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
 
-    .hero-photo img {
+    .btn-primary,
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.65rem 1.4rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: transform 0.12s ease, box-shadow 0.12s ease,
+        background 0.12s ease;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #140c2b;
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.45);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--accent-soft);
+      border-color: var(--border-subtle);
+    }
+
+    .btn-primary:hover,
+    .btn-secondary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.5);
+    }
+
+    .section {
+      margin-top: 2rem;
+    }
+
+    .section-title {
+      font-size: 1.25rem;
+      margin: 0 0 0.35rem;
+    }
+
+    .section-sub {
+      font-size: 0.9rem;
+      color: var(--text-soft);
+      margin-bottom: 0.9rem;
+    }
+
+    .directores {
+      background: var(--card-soft);
+      border-radius: 1.1rem;
+      padding: 1rem 1rem 1.25rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .directores img {
+      border-radius: 1rem;
+      max-width: 260px;
       width: 100%;
       height: auto;
       display: block;
     }
 
-    .cta-group {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
+    .directores-info h3 {
+      margin: 0 0 0.35rem;
+      font-size: 1rem;
     }
 
-    .btn {
-      padding: 0.95rem 1.8rem;
-      border-radius: 999px;
-      border: 1px solid transparent;
-      text-decoration: none;
-      font-weight: 600;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .btn-primary {
-      background: linear-gradient(140deg, var(--accent), var(--accent-2));
-      color: #120b1f;
-      box-shadow: 0 15px 35px rgba(143, 107, 255, 0.35);
-    }
-
-    .btn-secondary {
-      border-color: rgba(255, 255, 255, 0.25);
-      color: var(--text);
-    }
-
-    .btn:hover {
-      transform: translateY(-3px);
-    }
-
-    .badge-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 1rem;
-      margin-top: 2rem;
-    }
-
-      .badge {
-        border: 1px solid rgba(193, 139, 255, 0.15);
-        border-radius: 16px;
-        padding: 1rem;
-        text-align: center;
-        background: rgba(193, 139, 255, 0.08);
-      }
-
-      .card {
-        background: var(--card);
-        border-radius: 20px;
-        padding: 1.75rem;
-        border: 1px solid rgba(193, 139, 255, 0.12);
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
-      }
-
-    .list-check {
-      list-style: none;
-      padding: 0;
-      margin: 1.5rem 0 0;
-      color: var(--muted);
-    }
-
-    .list-check li {
-      margin-bottom: 0.6rem;
-      padding-left: 1.4rem;
-      position: relative;
-    }
-
-    .list-check li::before {
-      content: '\2022';
-      position: absolute;
-      left: 0;
-      color: var(--accent);
-    }
-
-    .hero-bullets {
-      list-style: none;
-      padding: 0;
-      margin: 1.2rem 0 0;
-    }
-
-    .hero-bullets li {
-      margin-bottom: 0.6rem;
-      padding-left: 1.25rem;
-      position: relative;
-      color: var(--text);
-      font-weight: 500;
-    }
-
-    .hero-bullets li::before {
-      content: '\2713';
-      position: absolute;
-      left: 0;
-      color: var(--accent);
-      font-weight: 700;
-    }
-
-    .tips {
-      margin: 1.4rem 0 0;
-      padding: 1rem 1.1rem;
-      border-radius: 14px;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      background: rgba(0, 0, 0, 0.15);
-    }
-
-    .tips strong {
-      display: block;
-      margin-bottom: 0.6rem;
-      color: var(--accent);
-      letter-spacing: 0.02em;
-    }
-
-    .tips ul {
-      list-style: none;
-      padding: 0;
+    .directores-info p {
+      font-size: 0.9rem;
+      color: var(--text-soft);
       margin: 0;
     }
 
-    .tips li {
-      position: relative;
-      padding-left: 1.4rem;
-      margin-bottom: 0.55rem;
-      color: var(--text);
+    .pill {
+      display: inline-block;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--accent-soft);
+      margin-bottom: 0.35rem;
     }
 
-    .tips li::before {
-      content: '\2605';
-      position: absolute;
-      left: 0;
-      color: var(--accent);
-      font-weight: 700;
+    p {
+      font-size: 0.9rem;
+      margin-top: 0;
+      color: var(--text-main);
     }
 
-    .video-block {
-      padding: 1.5rem;
-      border-radius: 20px;
-      background: var(--card);
-      border: 1px solid rgba(193, 139, 255, 0.12);
-      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+    strong {
+      color: #ffffff;
     }
 
-    .video-embed {
-      position: relative;
-      padding-top: 56.25%;
-      border-radius: 12px;
-      overflow: hidden;
+    .video-wrapper {
+      background: var(--card-soft);
+      border-radius: 1.1rem;
+      padding: 1rem;
     }
 
-    .video-embed iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
+    .video-wrapper iframe {
+      border-radius: 0.75rem;
+      border: none;
       width: 100%;
-      height: 100%;
-      border: 0;
+      height: 290px;
     }
 
-    .why-block {
-      margin-top: 1.5rem;
-      padding: 1.25rem 1.5rem;
-      border-radius: 16px;
-      border: 1px solid rgba(193, 139, 255, 0.18);
-      background: rgba(0, 0, 0, 0.15);
+    @media (min-width: 768px) {
+      .video-wrapper iframe {
+        height: 360px;
+      }
     }
 
-    .cta-group {
-      margin-top: 1rem;
-    }
-
-    .plans {
+    .grid-2 {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .steps-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: 1fr;
       gap: 1.25rem;
-      margin-top: 2rem;
     }
 
-    .step {
-      padding: 1.4rem;
-      border-radius: 18px;
-      border: 1px solid rgba(193, 139, 255, 0.18);
-      background: rgba(7, 4, 12, 0.35);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    @media (min-width: 840px) {
+      .grid-2 {
+        grid-template-columns: 1.1fr 1fr;
+      }
     }
 
-    .step span {
-      display: inline-flex;
-      width: 36px;
-      height: 36px;
-      align-items: center;
-      justify-content: center;
-      border-radius: 50%;
-      background: rgba(193, 139, 255, 0.22);
-      color: var(--accent);
+    ul {
+      margin: 0.25rem 0 0.75rem;
+      padding-left: 1.1rem;
+      /* unifica la indentación */
+      font-size: 0.9rem;
+      color: var(--text-main);
+    }
+
+    li+li {
+      margin-top: 0.25rem;
+    }
+
+    .check-list {
+      padding-left: 1.1rem;
+      list-style-type: disc;
+    }
+
+    .check-list li {
+      position: static;
+      list-style: disc;
+      padding-left: 0;
+    }
+
+    .highlight-box {
+      background: #2f1b57;
+      border-radius: 0.9rem;
+      border: 1px solid var(--border-subtle);
+      padding: 0.75rem 0.9rem;
+      font-size: 0.85rem;
+      color: var(--text-soft);
+      margin-top: 0.75rem;
+    }
+
+    /* Pricing table compact */
+    .pricing-table-wrapper {
+      margin-top: 1.25rem;
+    }
+
+    .pricing-table-card {
+      background: #2a1849;
+      border-radius: 1rem;
+      padding: 1.25rem 1.1rem 1.4rem;
+      border: 1px solid #3b275c;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+      overflow-x: auto;
+      /* scroll horizontal en pantallas chicas */
+    }
+
+    .pricing-table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 520px;
+      font-size: 0.88rem;
+    }
+
+    .pricing-table thead th {
+      text-align: left;
+      padding: 0.45rem 0.6rem;
+      color: #d1c4ff;
       font-weight: 600;
-      margin-bottom: 0.6rem;
+      border-bottom: 1px solid #3b275c;
+      white-space: nowrap;
     }
 
-    .step p {
-      color: var(--muted);
-      margin-top: 0.4rem;
+    .pricing-table thead th span {
+      font-size: 0.7rem;
+      font-weight: 400;
+      color: #a89ae4;
     }
 
-    .plan ul li::before {
-      content: '\2022';
+    .pricing-table tbody td {
+      padding: 0.4rem 0.6rem;
+      border-bottom: 1px solid #3b275c;
+      color: #f9f5ff;
+      white-space: nowrap;
     }
 
-    .cta-block {
+    .pricing-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    .pricing-table tbody td:first-child {
+      font-weight: 600;
+    }
+
+    .pricing-table .muted {
+      color: #a89ae4;
+      font-size: 0.8rem;
+    }
+
+    .pricing-note {
+      margin-top: 0.9rem;
+      font-size: 0.78rem;
+      color: #c9b8ff;
+      text-align: left;
+    }
+
+    @media (min-width: 900px) {
+      .pricing-table-card {
+        padding: 1.5rem 1.4rem 1.6rem;
+      }
+    }
+
+    .packs-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin-top: 1.1rem;
+    }
+
+    @media (min-width: 840px) {
+      .packs-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    .pack-card {
+      background: var(--card-soft);
+      border-radius: 1rem;
+      padding: 1.1rem 1rem 1.25rem;
+      border: 1px solid var(--border-subtle);
+    }
+
+    .pack-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--accent-soft);
+      margin-bottom: 0.4rem;
+    }
+
+    .pack-card h3 {
+      margin: 0 0 0.35rem;
+      font-size: 1rem;
+    }
+
+    .pack-card p {
+      font-size: 0.88rem;
+      color: var(--text-soft);
+    }
+
+    .pack-card ul {
+      font-size: 0.86rem;
+    }
+
+    .price {
+      font-size: 1rem;
+      font-weight: 700;
+      margin: 0.1rem 0 0;
+      color: var(--accent-strong);
+    }
+
+    .price-note {
+      font-size: 0.82rem;
+      color: var(--text-soft);
+      margin: 0;
+    }
+
+    .section-footer-title {
+      font-size: 1.05rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .cta-final {
+      margin-top: 2.25rem;
       text-align: center;
-      padding: 3rem 2rem;
-      background: linear-gradient(120deg, rgba(143, 107, 255, 0.25), rgba(193, 139, 255, 0.12));
-      border-radius: 24px;
-      border: 1px solid rgba(255, 255, 255, 0.08);
     }
 
-    section {
-      padding: 4rem 0;
+    .cta-final h2 {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
     }
 
-    section:nth-of-type(even) {
-      background: var(--bg-alt);
-    }
-
-    footer {
-      text-align: center;
-      padding: 3rem 0;
-      color: var(--muted);
+    .cta-final p {
+      max-width: 540px;
+      margin: 0.25rem auto 1.3rem;
+      color: var(--text-soft);
       font-size: 0.9rem;
     }
 
-      @media (max-width: 720px) {
-        nav ul {
-          display: none;
-        }
+    .cta-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.75rem;
+    }
 
-        .cta-group {
-          flex-direction: column;
-          align-items: stretch;
-        }
-
-        .hero-media {
-          flex-direction: column;
-        }
-
-        .hero-media .card,
-        .hero-photo {
-          flex: 1 1 100%;
-          max-width: 100%;
-        }
-      }
+    .small-muted {
+      font-size: 0.8rem;
+      color: var(--text-soft);
+      margin-top: 0.8rem;
+    }
   </style>
 </head>
 
 <body>
-  <header>
+  <div class="page">
     <div class="wrapper">
-      <div class="topbar">
-        <div class="logo">Coacheos · Timbaleros</div>
-        <nav>
-          <ul>
-            <li><a href="#concepto">Concepto</a></li>
-            <li><a href="#equipo">Equipo</a></li>
-            <li><a href="#oferta">Oferta</a></li>
-            <li><a href="#planes">Planes</a></li>
-            <li><a href="#contacto">WhatsApp</a></li>
-          </ul>
-        </nav>
-      </div>
-      <div class="hero">
-        <div>
-          <p class="eyebrow">By Fabián y Laura</p>
-          <h1>Coacheos Profesionales para Crear y Potenciar tu Coreografía</h1>
-          <p class="hero-subtitle">Elevá tu nivel competitivo con un acompañamiento experto y personalizado.</p>
-          <div class="hero-photo">
-            <img src="assets/img/fabian-laura.jpg" alt="Fabián y Laura trabajando con su compañía" />
-          </div>
-          <p>
-            Coacheos es un servicio integral diseñado para bailarines, parejas y grupos que buscan competir, crear un
-            show
-            o alcanzar un nivel profesional. Contamos con más de 20 años de experiencia, campeonatos y giras
-            internacionales; te guiamos en cada etapa del proceso creativo y técnico para que tu presentación tenga el
-            máximo impacto.
-          </p>
-          <ul class="hero-bullets">
-            <li>Selección y edición profesional de la música.</li>
-            <li>Lectura y estrategia basada en reglamento.</li>
-            <li>Concepto artístico y narrativa escénica.</li>
-            <li>Armado escénico y puesta en escena.</li>
-            <li>Correcciones técnicas avanzadas.</li>
-            <li>Coaching mental y preparación competitiva.</li>
-            <li>Optimización de performance.</li>
-            <li>Entrenamiento en proyección, presencia y estilo.</li>
-          </ul>
-          <div class="tips">
-            <strong>TIPS para elegir un buen proceso de coacheo</strong>
-            <ul>
-              <li>Buscá un método que combine baile, técnica y estrategia de competición.</li>
-              <li>Priorizar claridad musical y conceptual de tu performance.</li>
-              <li>Una coreografía efectiva no siempre es la más compleja, sino la más coherente.</li>
-              <li>Ensayá con criterios: momentos fuertes, uso espacial, puntos de impacto.</li>
-              <li>La edición musical es tan importante como los pasos.</li>
-            </ul>
-          </div>
-          <div class="cta-group">
-            <a class="btn btn-primary"
-              href="https://wa.me/5493515111242?text=Hola%20Los%20Timbaleros,%20quiero%20informaci%C3%B3n%20de%20Coacheos"
-              target="_blank" rel="noreferrer">Reservar un coacheo</a>
-            <a class="btn btn-secondary" href="#oferta">Ver todo lo que incluye</a>
-          </div>
-          <div class="video-block" style="margin-top: 1.5rem;" id="video">
-            <p class="eyebrow">Mira un ejemplo</p>
-            <h3>Asi se ve nuestro trabajo en escena.</h3>
-            <p>Un adelanto de la calidad de montaje, presencia escenica y musicalidad que vas a entrenar con nosotros.
-            </p>
-            <div class="video-embed">
-              <iframe width="885" height="498" src="https://www.youtube.com/embed/7xPMmgOiXB8"
-                title="Salsa Dance - Fabian y Laura (Arg)" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <div class="card-main">
+
+        <!-- ENCABEZADO PRINCIPAL -->
+        <div class="badge-top">COACHEOS · TIMBALEROS</div>
+        <div class="byline">BY FABIÁN Y LAURA</div>
+        <h1 class="hero-title">Coacheos Profesionales para Crear y Potenciar tu Coreografía</h1>
+        <p class="hero-subtitle">
+          Elevá tu nivel competitivo con un acompañamiento experto y personalizado, pensado para bailarines, parejas y
+          grupos.
+        </p>
+
+        <div class="hero-image">
+          <!-- Reemplaza la ruta por la imagen correcta -->
+          <img src="assets/img/FabianYLaura-03.jpg" alt="Fabian y Laura" />
+        </div>
+
+        <!-- FOTO DIRECTORES -->
+        <section class="section" id="directores">
+          <div class="directores">
+            <div class="directores-info">
+              <div class="pill">Dirección artística</div>
+              <h3>Fabián López &amp; Laura Gaetán</h3>
+              <p>
+                Pareja de bailarines profesionales de ritmos latinos, coreógrafos y jueces
+                nacionales e internacionales. Más de 20 años trabajando en competencias,
+                shows y formación de bailarines.
+              </p>
             </div>
           </div>
-          <div class="why-block">
-            <p class="eyebrow">POR QUE ELEGIRNOS</p>
-            <ul class="hero-bullets">
-              <li>Con más de 20 años como formadores, competidores y jurados, tenemos experiencia real en cada
-                instancia.</li>
-              <li>Método probado que combina baile, técnica, psicología y performance.</li>
-              <li>Experiencia real en mundiales y eventos de alto nivel.</li>
-              <li>Asistencia personalizada según tu nivel y objetivos.</li>
-            </ul>
+        </section>
+
+        <!-- QUÉ ES COACHEOS -->
+        <section class="section" id="que-es">
+          <h2 class="section-title">¿Qué es Coacheos?</h2>
+          <p>
+            Coacheos es un sistema de entrenamiento coreográfico basado en el
+            <strong>análisis profesional de tus videos</strong>. Vos grabás tu ensayo,
+            nos enviás el material y recibís una devolución clara, precisa y
+            personalizada para aplicar en tu próximo entrenamiento.
+          </p>
+          <p>
+            Funciona tanto <strong>online</strong> como <strong>presencial</strong>, y está pensado para
+            generar avances reales semana a semana, ya sea que quieras competir,
+            optimizar un show o crear una coreografía desde cero.
+          </p>
+          <div class="video-wrapper">
+            <!-- Cambiar VIDEO_ID_AQUI por el ID real de YouTube -->
+            <iframe src="https://www.youtube.com/embed/ga2lHD49jMo" title="Video presentación Coacheos"
+              allowfullscreen></iframe>
           </div>
-          <div class="badge-grid">
-            <div class="badge">Alta demanda: mínimo 5-10 coacheos activos por mes.</div>
-            <div class="badge">Paquetes premium desde ARS 150.000 a 500.000+.</div>
-            <div class="badge">Edición musical profesional incluida.</div>
+          <div class="hero-actions">
+            <a href="#contacto" class="btn-primary">Quiero mi diagnóstico inicial</a>
+            <a href="#packs" class="btn-secondary">Ver niveles y opciones</a>
           </div>
-        </div>
-        <div class="card">
-          <h3>Lo que lográs con Coacheos</h3>
-          <ul class="list-check">
-            <li>Proceso paso a paso para competir sin miedos.</li>
-            <li>Mentoría artística y psicológica para sostener el nivel.</li>
-            <li>Material entregable: checklist, videos y PDFs.</li>
-            <li>Resultados visibles en técnica, performance y presencia.</li>
+        </section>
+
+        <!-- DIAGNàSTICO + SESIONES + MODALIDADES -->
+        <section class="section" id="metodo">
+          <div class="grid-2">
+            <div>
+              <div class="pill">Paso 1</div>
+              <h2 class="section-title">Diagnóstico Inicial</h2>
+              <p>
+                Antes de empezar, hacemos una evaluación para entender dónde estás y qué necesitás.
+              </p>
+              <ul>
+                <li>Breve conversación (videollamada, audio o chat).</li>
+                <li>
+                  <strong>Video diagnóstico que vos nos enviás</strong>, donde evaluamos tu nivel técnico,
+                  musicalidad, estilo, objetivo y estado actual de tu coreografía.
+                </li>
+              </ul>
+              <p>
+                Con esa información definimos cuál es el nivel ideal para vos:
+                <strong>Corrección</strong>, <strong>Optimización</strong> o
+                <strong>Creación desde Cero</strong>.
+              </p>
+            </div>
+            <div>
+              <div class="pill">Paso 2</div>
+              <h2 class="section-title">¿Qué es una sesión de Coacheos?</h2>
+              <p>
+                Cada sesión se basa en tu práctica real:
+              </p>
+              <ul>
+                <li>Nos enviás un video nuevo de tu ensayo.</li>
+                <li>Lo analizamos en detalle.</li>
+                <li>
+                  Recibís correcciones concretas en audio, texto o video demostrativo.
+                </li>
+              </ul>
+              <p>
+                Cada nueva sesión parte de un nuevo video tuyo, lo que nos permite seguir tu
+                evolución semana a semana.
+              </p>
+
+              <h3 style="margin-top: 0.9rem;">Modalidades</h3>
+              <ul>
+                <li>
+                  <strong>Online:</strong> nos enviás tus videos desde cualquier lugar
+                  y recibís devoluciones precisas a distancia.
+                </li>
+                <li>
+                  <strong>Presencial:</strong> revisamos el video juntos y sumamos
+                  ajustes en vivo sobre tu técnica y performance.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- CASOS DE USO -->
+        <section class="section" id="casos">
+          <h2 class="section-title">¿En qué casos se usa Coacheos?</h2>
+          <ul class="check-list">
+            <li>
+              <strong>Corrección:</strong> ya tenés coreografía y necesitás pulir
+              técnica, limpieza, tiempos, musicalidad y presencia.
+            </li>
+            <li>
+              <strong>Optimización:</strong> tu coreografía tiene estructura, pero
+              le falta impacto, coherencia, orden y momentos fuertes.
+            </li>
+            <li>
+              <strong>Creación desde Cero:</strong> no tenés música ni
+              coreografía y querés una obra completa pensada especialmente para vos.
+            </li>
           </ul>
-        </div>
+          <div class="highlight-box">
+            <strong>Duraciones sugeridas:</strong>
+            <div style="margin-top: 0.25rem;">
+              Corrección (desde 1 mes)<br />
+              Optimización (4 meses)<br />
+              Creación desde Cero (6 meses)
+            </div>
+          </div>
+        </section>
+
+        <!-- CAPAS + PRECIOS -->
+        <section class="section" id="packs">
+          <p class="section-sub lead">
+            Primero hacemos la Sesión de Diagnóstico, y desde ahí definimos el nivel de coacheo ideal para tu proyecto.
+          </p>
+          <h2 class="section-title">Niveles de Coacheos</h2>
+          <p class="section-sub">
+            Elegimos juntos el nivel ideal según tu objetivo, tu nivel y el estado
+            actual de tu coreografía.
+          </p>
+
+          <!-- PRICING TABLE – COACHEO ESENCIAL (FORMATO TABLA COMPACTA) -->
+          <section class="section" id="pricing-esencial">
+            <h2 class="section-title">Valores Coacheo Esencial</h2>
+            <p class="section-sub">Corrección técnica basada en análisis de video</p>
+
+            <div class="pricing-table-wrapper">
+              <div class="pricing-table-card">
+                <table class="pricing-table">
+                  <thead>
+                    <tr>
+                      <th>Tipo de coacheo</th>
+                      <th>Sesión individual</th>
+                      <th>Pack 4 sesiones<br /><span>(solo solista)</span></th>
+                      <th>Mes intensivo<br /><span>(solo solista)</span></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>Solista</strong></td>
+                      <td>ARS 45.000</td>
+                      <td>ARS 170.000</td>
+                      <td>ARS 220.000</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Pareja</strong></td>
+                      <td>ARS 80.000</td>
+                      <td class="muted">A consultar</td>
+                      <td class="muted">A consultar</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Grupal</strong></td>
+                      <td>ARS 120.000</td>
+                      <td class="muted">A consultar</td>
+                      <td class="muted">A consultar</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <p class="pricing-note">
+                  *Los valores para packs y mes intensivo en pareja o grupo se confirman en el Diagnóstico Inicial,
+                  según la cantidad de bailarines y el nivel técnico.*
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <div class="packs-grid">
+
+            <!-- OPTIMIZACIÓN -->
+            <div class="pack-card">
+              <div class="pack-tag">Nivel 2 · Optimización</div>
+              <h3>Optimización Total</h3>
+              <p>
+                Reorganizamos, potenciamos y llevamos tu coreografía a un nivel
+                realmente competitivo.
+              </p>
+              <ul>
+                <li>Reordenamiento coreográfico.</li>
+                <li>Creación de momentos fuertes e impacto.</li>
+                <li>Storytelling y estructura escénica.</li>
+                <li>Correcciones semanales por video.</li>
+                <li>Simulación final estilo competencia.</li>
+              </ul>
+              <div class="highlight-box">
+                <strong>Optimización Total:</strong> este tipo de proyecto se
+                cotiza de forma personalizada durante el Diagnóstico Inicial,
+                teniendo en cuenta nivel, objetivo, tipo de montaje (solista,
+                pareja o grupo) y complejidad artística.
+              </div>
+              <p class="price-note" style="margin-top:0.7rem;">
+                Duración sugerida: 4 meses mínimos de acompañamiento.
+              </p>
+            </div>
+
+            <!-- CREACIÓN DESDE CERO -->
+            <div class="pack-card">
+              <div class="pack-tag">Nivel 3 · Servicio Premium</div>
+              <h3>Creación desde Cero</h3>
+              <p>
+                Proyecto artístico completo: música, concepto, coreografía,
+                puesta y performance final, diseñado especialmente para vos.
+              </p>
+              <ul>
+                <li>Selección y edición musical profesional.</li>
+                <li>Concepto, storytelling y energía escénica.</li>
+                <li>Creación coreográfica completa desde cero.</li>
+                <li>Correcciones y seguimiento semanal por video.</li>
+                <li>Simulación final de la obra completa.</li>
+              </ul>
+              <div class="highlight-box">
+                <strong>Servicio Premium:</strong> este tipo de proyecto se
+                cotiza de forma personalizada durante el Diagnóstico Inicial,
+                teniendo en cuenta nivel, objetivo, tipo de montaje (solista,
+                pareja o grupo) y complejidad artística.
+              </div>
+              <p class="price-note" style="margin-top:0.7rem;">
+                Duración sugerida: 6 meses de acompañamiento completo.
+              </p>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- SERVICIO INTEGRAL + BENEFICIOS -->
+        <section class="section" id="integral">
+          <h2 class="section-title">Coacheos como servicio integral</h2>
+          <p>
+            Coacheos es acompañamiento total para bailarines, parejas y grupos que
+            quieran competir, crear un show o alcanzar un nivel profesional.
+            Te guiamos en cada etapa, <strong>de la música al saludo final</strong>.
+          </p>
+          <ul class="check-list">
+            <li>Selección y edición profesional de la música.</li>
+            <li>Lectura del reglamento y estrategia para sumar puntos.</li>
+            <li>Concepto artístico y narrativa escénica.</li>
+            <li>Puesta en escena y uso del espacio.</li>
+            <li>Técnica, estilo, proyección y presencia.</li>
+            <li>Preparación mental y enfoque competitivo.</li>
+            <li>Correcciones semanales por video.</li>
+            <li>Simulación de competencia.</li>
+          </ul>
+
+          <h3 class="section-footer-title">Lo que lográs con Coacheos</h3>
+          <div class="highlight-box">
+            Con Coacheos lográs un proceso paso a paso para competir sin miedos,
+            con mentoría artística y psicológica que te sostiene en cada etapa, y
+            resultados visibles en tu técnica, tu performance y tu presencia, para
+            que realmente puedas brillar en el escenario.
+          </div>
+
+          <h3 class="section-footer-title">Coacheos para distintos tipos de bailarines</h3>
+          <ul>
+            <li>
+              <strong>Competidores nuevos:</strong> te guiamos en categorías, tiempos,
+              reglamento y presentación para que no sientas que “vas a hacer el ridículo”,
+              sino que sepas exactamente qué hacer.
+            </li>
+            <li>
+              <strong>Competidores activos:</strong> diagnóstico profundo para entender
+              por qué no llegan los podios; ajustamos técnica, musicalidad, impacto y
+              momentos fuertes.
+            </li>
+            <li>
+              <strong>Bailarines que quieren show:</strong> creamos o refinamos una pieza
+              única para congresos, eventos o tu carrera personal.
+            </li>
+          </ul>
+
+          <h3 class="section-footer-title">Por qué elegirnos</h3>
+          <ul>
+            <li>Más de 20 años como formadores, competidores y jurados.</li>
+            <li>Experiencia real en mundiales y eventos internacionales.</li>
+            <li>
+              Método que integra baile, técnica, estrategia, psicología y performance.
+            </li>
+            <li>Asistencia personalizada según tu nivel y objetivos.</li>
+          </ul>
+        </section>
+
+        <!-- CTA FINAL -->
+        <section class="cta-final" id="contacto">
+          <h2>¿Querés preparar tu coreografía con Coacheos?</h2>
+          <p>
+            Contanos tu objetivo, envianos tu video diagnóstico y coordinamos tu
+            primera instancia de trabajo. El Diagnóstico Inicial nos permite
+            recomendarte el nivel ideal y trazar un plan de acción claro.
+          </p>
+          <div class="cta-buttons">
+            <!-- Cambiá el link por tu WhatsApp real -->
+            <a href="https://wa.me/XXXXXXXXXX" class="btn-primary">
+              Escribinos por WhatsApp
+            </a>
+            <!-- Cambiá el mail -->
+            <a href="mailto:info@tusitio.com" class="btn-secondary">
+              Enviar un email
+            </a>
+          </div>
+          <p class="small-muted">
+            Reservamos un número limitado de coacheos activos por mes para garantizar
+            un acompañamiento cercano y de calidad.
+          </p>
+        </section>
+
       </div>
     </div>
-  </header>
-
-  <main>
-    <section id="concepto">
-      <div class="wrapper">
-        <div class="section-heading">
-          <p class="eyebrow">Concepto del servicio</p>
-          <h2>Coacheos es acompañamiento total, de la música al saludo final.</h2>
-          <p>
-            Perfecto para quienes quieren competir por primera vez, necesitan ese empujón para subir al podio o desean
-            un show profesional hecho a su medida. Somos garantía porque vivimos reglamentos, rondas, penalizaciones y
-            escenarios internacionales durante dos décadas.
-          </p>
-        </div>
-        <div class="grid cards-3">
-          <article class="card">
-            <h3>Competidores nuevos</h3>
-            <p>
-              Claridad absoluta: te guiamos en reglamento, categorías, tiempos y cómo presentarte sin sentir que vas a
-              “hacer el ridículo”.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Competidores activos</h3>
-            <p>
-              Diagnóstico profundo para detectar por qué no llegan los podios. Ajustamos técnica, musicalidad y momentos
-              wow para subir puntajes.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Bailarines que quieren show</h3>
-            <p>
-              Creamos esa pieza única para congresos, eventos sociales o la carrera personal. Coreo original, estilo y
-              presencia escénica lideran el proceso.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="equipo">
-      <div class="wrapper">
-        <div class="section-heading">
-          <p class="eyebrow">Quiénes te acompañan</p>
-          <h2>Fabián López &amp; Laura Gaetán</h2>
-          <p>
-            Pareja de bailarines profesionales de ritmos latinos, coreógrafos y jueces nacionales e internacionales.
-            Durante 20 años lideran la academia Los Timbaleros en Córdoba (Espora 123, barrio Alto Alberdi) formando
-            bailarines en salsa, bachata, merengue, mambo y chachachá con un cuerpo docente especializado. Su foco está
-            en preparar talentos para competencias y shows latinos.
-          </p>
-        </div>
-        <div class="grid cards-3">
-          <article class="card">
-            <h3>Trayectoria y shows</h3>
-            <p>
-              Talleristas y artistas invitados en Argentina y en países como Chile, Brasil, Perú, Estados Unidos, Cuba
-              y Uruguay. Presentaron shows y cursos en congresos, festivales y giras privadas.
-            </p>
-            <ul class="list-check">
-              <li>Academia Los Timbaleros con 20 años de actividad.</li>
-              <li>Directores y profesores activos en cada disciplina.</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h3>Logros competitivos</h3>
-            <p>
-              Bicampeones argentinos de salsa, representantes nacionales en el Mundial de Puerto Rico (3 veces) y
-              finalistas mundiales en Orlando, Estados Unidos.
-            </p>
-            <p style="color: var(--muted); margin-top: 0.8rem;">
-              Han acompañado con su baile a Oscar de León, José Alberto “El Canario”, Tito Nieves, Luis Enrique,
-              Domenic Marte y Daniel Santa Cruz.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Formación académica</h3>
-            <p>
-              Se formaron con referentes como Jayson Molina (Puerto Rico), Marta Bersy y Maykel Fonts (Cuba) y maestros
-              de
-              Nueva York como Eddie Torres y Franklin Diaz. Integraron staffs profesionales y trasladan ese conocimiento
-              a cada coacheo.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="wrapper">
-        <div class="section-heading">
-          <p class="eyebrow">Por qué es único</p>
-          <h2>Valor diferencial que convierte curiosos en clientes premium.</h2>
-          <p>
-            No es solo coaching técnico. Es un sistema completo con entregables reales, edición musical profesional y
-            secretos de jurado que otras academias no manejan.
-          </p>
-        </div>
-        <div class="grid cards-3">
-          <article class="card">
-            <h3>Proceso paso a paso</h3>
-            <p>
-              Desde elegir la música hasta cómo mirar al jurado. Checklist y guías que reducen la incertidumbre y
-              ordenan el
-              entrenamiento día a día.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Expertise en reglamentos</h3>
-            <p>
-              Explicamos criterios, penalizaciones y cómo capitalizar cada ítem. Sabemos qué pide cada competencia y lo
-              traducimos a acciones concretas.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Mentoría integral</h3>
-            <p>
-              Correcciones técnicas, drills personalizados, mentalidad de competencia y entregables (videos, PDFs,
-              notas)
-              para seguir creciendo entre sesiones.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="oferta">
-      <div class="wrapper">
-        <div class="section-heading">
-          <p class="eyebrow">Oferta central</p>
-          <h2>Coacheos Integral Premium: 11 hitos que cubren todo el proceso.</h2>
-          <p>
-            Cada servicio incluye sesiones online o presenciales, seguimiento por video y espacios privados para
-            feedback. Si
-            un punto es opcional, lo ajustamos al objetivo, pero siempre con la misma rigurosidad.
-          </p>
-        </div>
-        <div class="steps-grid">
-          <div class="step"><span>1</span><strong> Diagnóstico</strong>
-            <p>Nivel, estilo, fortalezas/debilidades y objetivo final.</p>
-          </div>
-          <div class="step"><span>2</span><strong> Selección musical</strong>
-            <p>Análisis de energía y temáticas para elegir la pista adecuada.</p>
-          </div>
-          <div class="step"><span>3</span><strong> Edición profesional</strong>
-            <p>Cortes según reglamento, efectos y versión lista para competir.</p>
-          </div>
-          <div class="step"><span>4</span><strong> Lectura del reglamento</strong>
-            <p>Desmenuzamos criterios, penalizaciones y chances de puntaje.</p>
-          </div>
-          <div class="step"><span>5</span><strong> Concepto del show</strong>
-            <p>Tema, vestuario sugerido, storytelling y paleta emocional.</p>
-          </div>
-          <div class="step"><span>6</span><strong> Armado coreográfico</strong>
-            <p>Señas, entradas, salidas, distribución espacial y momentos wow.</p>
-          </div>
-          <div class="step"><span>7</span><strong> Coaching técnico</strong>
-            <p>Postura, brazos, pies, giros, mambos, shines y drills personalizados.</p>
-          </div>
-          <div class="step"><span>8</span><strong> Coaching performático</strong>
-            <p>Miradas, expresiones, actitudes y presencia escénica consciente.</p>
-          </div>
-          <div class="step"><span>9</span><strong> Correcciones semanales</strong>
-            <p>Evaluación por video o presencial con notas detalladas.</p>
-          </div>
-          <div class="step"><span>10</span><strong> Simulación de competencia</strong>
-            <p>Entradas, saludos, aprovechamiento del espacio y protocolo.</p>
-          </div>
-          <div class="step"><span>11</span><strong> Checklist final + video</strong>
-            <p>Recordatorios clave y video guía grabado por nosotros.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="planes">
-      <div class="wrapper">
-        <div class="section-heading">
-          <p class="eyebrow">Versiones para cada presupuesto</p>
-          <h2>Elegí el paquete que impulsa tu objetivo.</h2>
-          <p>Todos los planes incluyen soporte por WhatsApp y acceso a recursos privados.</p>
-        </div>
-        <div class="plans">
-          <article class="card plan">
-            <h3>Coacheos Light</h3>
-            <strong>ARS 90.000 – 150.000</strong>
-            <ul class="list-check">
-              <li>Sesión de diagnóstico</li>
-              <li>Selección musical + propuesta de temática</li>
-              <li>1 asesoría de reglamento</li>
-              <li>3 correcciones por video</li>
-              <li>Recomendado para quienes compiten por primera vez</li>
-            </ul>
-            <a class="btn btn-secondary"
-              href="https://wa.me/5493515111242?text=Hola%20Los%20Timbaleros,%20quiero%20consultar%20por%20el%20plan%20Coacheos%20Light"
-              target="_blank" rel="noreferrer">Consultar este plan</a>
-          </article>
-          <article class="card plan">
-            <h3>Coacheos Standard</h3>
-            <strong>ARS 180.000 – 300.000</strong>
-            <ul class="list-check">
-              <li>Todo lo de Light</li>
-              <li>Edición musical profesional</li>
-              <li>4 sesiones técnicas focalizadas</li>
-              <li>2 sesiones performáticas</li>
-              <li>Ideal para competidores intermedios</li>
-            </ul>
-            <a class="btn btn-secondary"
-              href="https://wa.me/5493515111242?text=Hola%20Los%20Timbaleros,%20quiero%20consultar%20por%20el%20plan%20Coacheos%20Standard"
-              target="_blank" rel="noreferrer">Consultar este plan</a>
-          </article>
-          <article class="card plan">
-            <h3>Coacheos Premium</h3>
-            <strong>ARS 350.000 – 600.000</strong>
-            <ul class="list-check">
-              <li>Servicio completo + coreografía creada por nosotros</li>
-              <li>Coaching ilimitado hasta la fecha del show</li>
-              <li>Simulación de competencia con presencia de Fabián &amp; Laura</li>
-              <li>Checklist extendido y dossier final</li>
-            </ul>
-            <a class="btn btn-secondary"
-              href="https://wa.me/5493515111242?text=Hola%20Los%20Timbaleros,%20quiero%20consultar%20por%20el%20plan%20Coacheos%20Premium"
-              target="_blank" rel="noreferrer">Consultar este plan</a>
-          </article>
-        </div>
-        <div class="card" style="margin-top: 2rem;">
-          <h3>Servicios individuales</h3>
-          <p style="color: var(--muted);">Combiná según tu necesidad puntual.</p>
-          <ul class="list-check">
-            <li>Edición musical sola desde ARS 30.000.</li>
-            <li>Corrección por video desde ARS 8.000 c/u.</li>
-            <li>Sesión presencial desde ARS 20.000.</li>
-            <li>Talleres grupales, PDFs y mini cursos para escalar.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="contacto">
-      <div class="wrapper">
-        <div class="cta-block">
-          <p class="eyebrow">Hablemos hoy</p>
-          <h2 style="margin: 0.6rem 0 1rem;">Agendá una consulta</h2>
-          <p style="color: var(--muted); margin-bottom: 2rem;">
-            La consulta estratégica tiene costo y asegura que nuestra agenda esté enfocada en proyectos comprometidos.
-            Reservamos máximo 10 coacheos activos por mes; contanos tu objetivo y coordinamos el encuentro.
-          </p>
-          <div class="cta-group" style="justify-content: center;">
-            <a class="btn btn-primary"
-              href="https://wa.me/5493515111242?text=Hola%20Los%20Timbaleros,%20quiero%20agendar%20una%20consulta%20paga%20de%20Coacheos"
-              target="_blank" rel="noreferrer">Enviar WhatsApp</a>
-            <a class="btn btn-secondary" href="mailto:hola@lostimbaleros.com">Enviar un email</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="wrapper">
-      © <span id="year"></span> Coacheos · Timbaleros · Córdoba - Argentina
-      <p style="margin-top: 0.5rem;">Hecho con amor por bailarines, para bailarines.</p>
-    </div>
-  </footer>
-
-  <script>
-    const year = document.getElementById('year');
-    if (year) year.textContent = new Date().getFullYear();
-  </script>
+  </div>
 </body>
 
 </html>
