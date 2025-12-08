@@ -117,6 +117,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 0.6rem;
+      justify-content: center;
     }
 
     .btn-primary,
@@ -133,6 +134,13 @@
       transition: transform 0.12s ease, box-shadow 0.12s ease,
         background 0.12s ease;
       white-space: nowrap;
+    }
+
+    .hero-actions .btn-primary,
+    .hero-actions .btn-secondary {
+      flex: 1 1 240px;
+      max-width: 320px;
+      width: 100%;
     }
 
     .btn-primary {
@@ -239,12 +247,6 @@
       display: grid;
       grid-template-columns: 1fr;
       gap: 1.25rem;
-    }
-
-    @media (min-width: 840px) {
-      .grid-2 {
-        grid-template-columns: 1.1fr 1fr;
-      }
     }
 
     ul {
@@ -391,6 +393,14 @@
 
     .pack-card ul {
       font-size: 0.86rem;
+    }
+
+    .pack-subtitle {
+      font-size: 0.78rem;
+      color: var(--accent-soft);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin: 0.4rem 0 0.15rem;
     }
 
     .price {
@@ -643,6 +653,23 @@
           </section>
 
           <div class="packs-grid">
+
+            <!-- COACHEO ESENCIAL -->
+            <div class="pack-card">
+              <div class="pack-tag">Nivel 1 · Coacheo Esencial</div>
+              <h3>Coacheo Esencial – Corrección</h3>
+              <p>
+                Correcciones técnicas basadas en tu video. Ideal para pulir una coreografía ya armada con ajustes claros
+                y efectivos.
+              </p>
+              <p class="pack-subtitle">Incluye</p>
+              <ul>
+                <li>Revisión técnica y limpieza.</li>
+                <li>Tiempos y musicalidad.</li>
+                <li>Ajustes según reglamento.</li>
+                <li>Presencia escénica y claridad coreográfica.</li>
+              </ul>
+            </div>
 
             <!-- OPTIMIZACIÓN -->
             <div class="pack-card">
