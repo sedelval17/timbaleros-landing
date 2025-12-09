@@ -606,13 +606,17 @@
           </p>
           <div class="video-wrapper">
             <!-- Cambiar VIDEO_ID_AQUI por el ID real de YouTube -->
-            <iframe src="https://www.youtube.com/embed/WzQzXJpy458" title="Video presentación Coacheos"
-              allowfullscreen></iframe>
+            <iframe id="video-presentacion" data-video-label="presentacion"
+              src="https://www.youtube.com/embed/WzQzXJpy458?enablejsapi=1&rel=0"
+              title="Video presentación Coacheos" allowfullscreen></iframe>
           </div>
           <div class="hero-actions">
             <a href="https://wa.me/5493515111242?text=Hola%21%20Quiero%20mi%20Diagn%C3%B3stico%20Inicial%20para%20Coacheos."
-              class="btn-primary">Quiero mi diagnóstico inicial</a>
-            <a href="#packs" class="btn-secondary">Ver niveles y opciones</a>
+              class="btn-primary" data-gtag-event="whatsapp_click" data-gtag-label="hero_diagnostico">
+              Quiero mi diagnóstico inicial
+            </a>
+            <a href="#packs" class="btn-secondary" data-gtag-event="cta_click"
+              data-gtag-label="hero_ver_niveles">Ver niveles y opciones</a>
           </div>
         </section>
 
@@ -682,7 +686,8 @@
             sesiones de coacheo.
           </p>
           <div class="video-wrapper">
-            <iframe src="https://www.youtube.com/embed/tBgBBTyk6wI" title="Sesión de Coacheo en vivo"
+            <iframe id="video-sesion" data-video-label="sesion_demo"
+              src="https://www.youtube.com/embed/tBgBBTyk6wI?enablejsapi=1&rel=0" title="Sesión de Coacheo en vivo"
               allowfullscreen></iframe>
           </div>
         </section>
@@ -768,8 +773,10 @@
                 </div>
               </div>
               <a class="btn-primary pack-btn"
-                href="https://wa.me/5493515111242?text=Hola%21%20Quiero%20info%20sobre%20Coacheo%20Esencial%20%28Nivel%201%29.">Consultar
-                Coacheo Esencial</a>
+                href="https://wa.me/5493515111242?text=Hola%21%20Quiero%20info%20sobre%20Coacheo%20Esencial%20%28Nivel%201%29."
+                data-gtag-event="whatsapp_click" data-gtag-label="pack_esencial">
+                Consultar Coacheo Esencial
+              </a>
             </div>
 
             <!-- OPTIMIZACIÓN -->
@@ -800,8 +807,10 @@
                 </p>
               </div>
               <a class="btn-primary pack-btn"
-                href="https://wa.me/5493515111242?text=Hola%21%20Quiero%20info%20sobre%20Optimizaci%C3%B3n%20Total%20%28Nivel%202%29.">Quiero
-                Optimización Total</a>
+                href="https://wa.me/5493515111242?text=Hola%21%20Quiero%20info%20sobre%20Optimizaci%C3%B3n%20Total%20%28Nivel%202%29."
+                data-gtag-event="whatsapp_click" data-gtag-label="pack_optimizacion">
+                Quiero Optimización Total
+              </a>
             </div>
 
             <!-- CREACIÓN DESDE CERO -->
@@ -832,8 +841,10 @@
                 </p>
               </div>
               <a class="btn-primary pack-btn"
-                href="https://wa.me/5493515111242?text=Hola%21%20Quiero%20info%20sobre%20Creaci%C3%B3n%20desde%20Cero%20%28Nivel%203%29.">Quiero
-                Crear desde Cero</a>
+                href="https://wa.me/5493515111242?text=Hola%21%20Quiero%20info%20sobre%20Creaci%C3%B3n%20desde%20Cero%20%28Nivel%203%29."
+                data-gtag-event="whatsapp_click" data-gtag-label="pack_creacion">
+                Quiero Crear desde Cero
+              </a>
             </div>
 
           </div>
@@ -906,7 +917,7 @@
           <div class="cta-buttons">
             <!-- Cambiá el link por tu WhatsApp real -->
             <a href="https://wa.me/5493515111242?text=Hola%21%20Me%20gustar%C3%ADa%20coordinar%20un%20Coacheo."
-              class="btn-primary">
+              class="btn-primary" data-gtag-event="whatsapp_click" data-gtag-label="cta_final_whatsapp">
               Escribinos por WhatsApp
             </a>
           </div>
@@ -919,6 +930,107 @@
       </div>
     </div>
   </div>
+
+  <script>
+    (function () {
+      function sendGtagEvent(eventName, params) {
+        if (typeof window.gtag === 'function' && eventName) {
+          window.gtag('event', eventName, params || {});
+        }
+      }
+
+      var youtubeVideos = [
+        { id: 'video-presentacion', label: 'presentacion' },
+        { id: 'video-sesion', label: 'sesion_demo' }
+      ];
+
+      function initClickTracking() {
+        var tracked = document.querySelectorAll('[data-gtag-event]');
+        tracked.forEach(function (el) {
+          el.addEventListener('click', function () {
+            var params = {};
+            var label = el.getAttribute('data-gtag-label');
+            if (label) {
+              params.label = label;
+            }
+            sendGtagEvent(el.getAttribute('data-gtag-event'), params);
+          });
+        });
+      }
+
+      function initScrollTracking() {
+        var thresholds = [25, 50, 75, 90];
+        var reached = {};
+
+        function checkScroll() {
+          var doc = document.documentElement;
+          var scrollTop = doc.scrollTop || document.body.scrollTop;
+          var maxScroll = (doc.scrollHeight - doc.clientHeight);
+          if (maxScroll <= 0) {
+            return;
+          }
+          var percent = Math.round((scrollTop / maxScroll) * 100);
+          thresholds.forEach(function (threshold) {
+            if (!reached[threshold] && percent >= threshold) {
+              reached[threshold] = true;
+              sendGtagEvent('scroll_depth', { percent: threshold });
+            }
+          });
+        }
+
+        var ticking = false;
+        window.addEventListener('scroll', function () {
+          if (!ticking) {
+            window.requestAnimationFrame(function () {
+              checkScroll();
+              ticking = false;
+            });
+            ticking = true;
+          }
+        }, { passive: true });
+
+        checkScroll();
+      }
+
+      function loadYouTubeAPI() {
+        var requiresAPI = youtubeVideos.some(function (video) {
+          return document.getElementById(video.id);
+        });
+        if (!requiresAPI) {
+          return;
+        }
+        var script = document.createElement('script');
+        script.src = 'https://www.youtube.com/iframe_api';
+        document.head.appendChild(script);
+      }
+
+      window.addEventListener('DOMContentLoaded', function () {
+        initClickTracking();
+        initScrollTracking();
+        loadYouTubeAPI();
+      });
+
+      window.onYouTubeIframeAPIReady = function () {
+        youtubeVideos.forEach(function (video) {
+          var element = document.getElementById(video.id);
+          if (!element || typeof YT === 'undefined') {
+            return;
+          }
+
+          video.player = new YT.Player(video.id, {
+            events: {
+              onStateChange: function (event) {
+                if (event.data === YT.PlayerState.PLAYING && !video.playSent) {
+                  video.playSent = true;
+                  sendGtagEvent('video_play', { label: video.label });
+                }
+              }
+            }
+          });
+        });
+      };
+    })();
+  </script>
 </body>
 
 </html>
