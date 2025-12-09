@@ -250,19 +250,16 @@
       background: var(--card-soft);
       border-radius: 1.1rem;
       padding: 1rem;
+      display: block;
     }
 
     .video-wrapper iframe {
       border-radius: 0.75rem;
       border: none;
       width: 100%;
-      height: 290px;
-    }
-
-    @media (min-width: 768px) {
-      .video-wrapper iframe {
-        height: 360px;
-      }
+      aspect-ratio: 16 / 9;
+      height: auto;
+      min-height: 300px;
     }
 
     .grid-2 {
